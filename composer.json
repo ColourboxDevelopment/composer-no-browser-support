@@ -1,5 +1,4 @@
 {
-    "version": "1.0.0",
     "name": "colourbox-account/no-browser-support",
     "description": "Show popup on not supported browsers about supported browsers",
     "homepage": "https://github.com/ColourboxDevelopment/composer-no-browser-support",
