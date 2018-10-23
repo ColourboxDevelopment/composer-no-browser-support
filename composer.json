@@ -1,6 +1,6 @@
 {
     "version": "1.0.0",
-    "name": "colourbox/no-browser-support",
+    "name": "colourbox-account/no-browser-support",
     "description": "Show popup on not supported browsers about supported browsers",
     "type": "library",
     "license": "Apache-2.0",
