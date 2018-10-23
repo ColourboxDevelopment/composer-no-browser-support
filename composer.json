@@ -1,0 +1,11 @@
+{
+	"repositories": [
+		{
+            "type": "path",
+            "url": "no-browser-support/"
+        }
+	],
+	"require": {
+		"colourbox/no-browser-support": "^1.0.0"
+	}
+}

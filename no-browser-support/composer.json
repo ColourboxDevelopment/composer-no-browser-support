@@ -1,0 +1,22 @@
+{
+    "version": "1.0.0",
+    "name": "colourbox/no-browser-support",
+    "description": "Show popup on not supported browsers about supported browsers",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Zoltan Fischer",
+            "email": "zoltan@colourbox.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "NoBrowserSupport": "src/"
+        }
+    }
+}
