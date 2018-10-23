@@ -10,16 +10,31 @@ class PopUp
     private static $cookieIndex = 'sb-no-browser-support-hide';
     private static $alwaysShowIndex = 'sb-no-browser-support-always-show';
     private static $language;
+    private static $cookieLifetime = 60;
 
     public static function check($language = '') {
+        self::cookie();
+
+        if (isset($_GET[self::$alwaysShowIndex])) {
+            unset($_COOKIE[self::$cookieIndex]);
+            setcookie(self::$cookieIndex, null, -1, "/", false);
+        }
+
         if ((strlen(trim(UserAgent::uaString())) > 0 && !self::hidden() && !self::validBrowser()) || isset($_GET[self::$alwaysShowIndex])) {
             self::$language = new Language($language);
             return self::show();
         }
     }
 
+    public static function cookie() {
+        echo isset($_COOKIE[self::$cookieIndex]) ? $_COOKIE[self::$cookieIndex] : 'undefined';
+        if (isset($_GET[self::$cookieIndex])) {
+            setcookie( self::$cookieIndex, '1', time() + self::$cookieLifetime, "/", false);
+        }
+    }
+
     private static function hidden() {
-        return isset($_GET[self::$cookieIndex]);
+        return isset($_COOKIE[self::$cookieIndex]) || isset($_GET[self::$cookieIndex]);
     }
 
     private static function validBrowser() {
@@ -33,6 +48,7 @@ class PopUp
             UserAgent::$SAFARI => 12,
             UserAgent::$EDGE => 17,
             UserAgent::$MSIE => 11,
+            UserAgent::$MSGECKO => 11,
             UserAgent::$FF => 62
         ];
 
