@@ -10,7 +10,7 @@ class PopUp
     private static $cookieIndex = 'sb-no-browser-support-hide';
     private static $alwaysShowIndex = 'sb-no-browser-support-always-show';
     private static $language;
-    private static $cookieLifetime = 60;
+    private static $cookieLifetime = 3600 * 24;
 
     public static function check($language = '') {
         self::cookie();
@@ -27,7 +27,6 @@ class PopUp
     }
 
     public static function cookie() {
-        echo isset($_COOKIE[self::$cookieIndex]) ? $_COOKIE[self::$cookieIndex] : 'undefined';
         if (isset($_GET[self::$cookieIndex])) {
             setcookie( self::$cookieIndex, '1', time() + self::$cookieLifetime, "/", false);
         }
