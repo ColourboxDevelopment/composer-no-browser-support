@@ -65,7 +65,8 @@
         width: <?=$height?>px;
     }
     .NoBrowserSupportTd2 {
-        padding: 0px 60px 0px 60px;
+        vertical-align: middle;
+        padding: 30px 60px 30px 60px;
     }
     .NoBrowserSupportTd2 a {
         color: #2C3775;
