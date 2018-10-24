@@ -38,7 +38,7 @@ The language of the popup content. Current supported languages:
 * de: Danish
 
 > Web browser requierement to **NOT dispaly the popup**:
-* Chrome 68+, Safari 11+, Microsoft Edge 16+, Firefox 61+, Microsoft Internet Explorer 11
+* Chrome 68+, Safari 10+, Microsoft Edge 16+, Firefox 61+, Microsoft Internet Explorer 11
 * Mobile device
 * Robots
 
