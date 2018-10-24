@@ -154,9 +154,9 @@
                     <div class="NoBrowserSupportText"><?=sprintf(self::$language->getTranslation('In order for you to get the full experience, please use one of our supported browsers. Download a supported browser <a href="%s" target="_blank">here</a>.'), self::browsehappyLink())?></div>
                     <table cellpadding="0" cellspacing="0" width="100%" class="NoBrowserSupportTableChk">
                     <tr>
-                        <td width="46%" class="NoBrowserSupportTableChkTd"><img src="<?=self::imgURL('/gfx/no-browser-support/check.jpg')?>" align="absmiddle" class="NoBrowserSupportTableChkImg" /> Safari 10+</td>
+                        <td width="44%" class="NoBrowserSupportTableChkTd"><img src="<?=self::imgURL('/gfx/no-browser-support/check.jpg')?>" align="absmiddle" class="NoBrowserSupportTableChkImg" /> Safari 10+</td>
                         <td width="4%" class="NoBrowserSupportTableChkSpacer">&nbsp;</td>
-                        <td width="50%" class="NoBrowserSupportTableChkTd"><img src="<?=self::imgURL('/gfx/no-browser-support/check.jpg')?>" align="absmiddle" class="NoBrowserSupportTableChkImg" /> Chrome (<?=self::$language->getTranslation('two latest versions')?>)</td>
+                        <td width="52%" class="NoBrowserSupportTableChkTd"><img src="<?=self::imgURL('/gfx/no-browser-support/check.jpg')?>" align="absmiddle" class="NoBrowserSupportTableChkImg" /> Chrome (<?=self::$language->getTranslation('two latest versions')?>)</td>
                     </tr>
                     <tr>
                         <td class="NoBrowserSupportTableChkTd"><img src="<?=self::imgURL('/gfx/no-browser-support/check.jpg')?>" align="absmiddle" class="NoBrowserSupportTableChkImg" /> Internet Explorer 11+</td>
