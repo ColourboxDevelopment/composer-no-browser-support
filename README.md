@@ -55,3 +55,4 @@ To test in different web browsers and versions use [browserstack.com](https://ww
 PHP: ^5.3.0 || ^7.0
 
 > This package requires no other composer packages
+
