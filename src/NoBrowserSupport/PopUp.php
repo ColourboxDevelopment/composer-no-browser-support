@@ -44,7 +44,7 @@ class PopUp
         // Newest versions - updated on 23 oct. 2018
         $versionTarget = [
             UserAgent::$CHROME => 69,
-            UserAgent::$SAFARI => 12,
+            UserAgent::$SAFARI => 10,
             UserAgent::$EDGE => 17,
             UserAgent::$MSIE => 11,
             UserAgent::$MSGECKO => 11,
@@ -53,7 +53,7 @@ class PopUp
 
         $target = [
             UserAgent::$CHROME => function($target) { return UserAgent::getChromeVersion() >= $target - 1; },
-            UserAgent::$SAFARI => function($target) { return UserAgent::getSafariVersion() >= $target - 1; },
+            UserAgent::$SAFARI => function($target) { return UserAgent::getSafariVersion() >= $target; },
             UserAgent::$EDGE => function($target) { return UserAgent::getEdgeVersion() >= $target - 1; },
             UserAgent::$MSIE => function($target) { return UserAgent::getMSIEVersion() >= $target; },
             UserAgent::$MSGECKO => function($target) { return UserAgent::getMSIEVersion() >= $target; },
