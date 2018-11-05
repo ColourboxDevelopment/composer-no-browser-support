@@ -37,10 +37,7 @@ The language of the popup content. Current supported languages:
 * da: German
 * de: Danish
 
-> Web browser requierement to **NOT dispaly the popup**:
-* Chrome 68+, Safari 10+, Microsoft Edge 16+, Firefox 61+, Microsoft Internet Explorer 11
-* Mobile device
-* Robots
+> The popup is displayed only on Microsoft Internet Explorer with version lower than 11
 
 > If the visitor closes the popup that reloads the current page with **sb-no-browser-support-hide** parameter in the url. This sets a cookie for **24 hours**, in this time period the web browser requierement is ignored fot the whole domain.
 

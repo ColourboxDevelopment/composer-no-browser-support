@@ -37,34 +37,11 @@ class PopUp
     }
 
     private static function validBrowser() {
-        if (UserAgent::isMobile() || UserAgent::isRobot()) {
-            return true;
+        $b = UserAgent::getBrowser();
+        if (($b === UserAgent::$MSIE || $b === UserAgent::$MSGECKO) && UserAgent::getMSIEVersion() < 11) {
+            return false;
         }
-
-        // Newest versions - updated on 23 oct. 2018
-        $versionTarget = [
-            UserAgent::$CHROME => 69,
-            UserAgent::$SAFARI => 10,
-            UserAgent::$EDGE => 17,
-            UserAgent::$MSIE => 11,
-            UserAgent::$MSGECKO => 11,
-            UserAgent::$FF => 62
-        ];
-
-        $target = [
-            UserAgent::$CHROME => function($target) { return UserAgent::getChromeVersion() >= $target - 1; },
-            UserAgent::$SAFARI => function($target) { return UserAgent::getSafariVersion() >= $target; },
-            UserAgent::$EDGE => function($target) { return UserAgent::getEdgeVersion() >= $target - 1; },
-            UserAgent::$MSIE => function($target) { return UserAgent::getMSIEVersion() >= $target; },
-            UserAgent::$MSGECKO => function($target) { return UserAgent::getMSIEVersion() >= $target; },
-            UserAgent::$FF => function($target) { return UserAgent::getFireFoxVersion() >= $target - 1; },
-        ];
-        foreach ( $target as $key => $value ) {
-            if ( UserAgent::getBrowser() === $key && $value($versionTarget[$key]) ) {
-                return true;
-            }
-        }
-        return false;
+        return true;
     }
 
     private static function show() {
